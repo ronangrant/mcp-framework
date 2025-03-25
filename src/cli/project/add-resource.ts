@@ -40,7 +40,7 @@ export async function addResource(name?: string) {
   try {
     await mkdir(resourcesDir, { recursive: true });
 
-    const resourceContent = `import { MCPResource, ResourceContent } from "mcp-framework";
+    const resourceContent = `import { MCPResource, ResourceContent } from "@ronangrant/mcp-framework";
 
 class ${className}Resource extends MCPResource {
   uri = "resource://${resourceName}";

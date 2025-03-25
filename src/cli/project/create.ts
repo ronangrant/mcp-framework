@@ -61,7 +61,7 @@ export async function createProject(name?: string) {
         start: "node dist/index.js"
       },
       dependencies: {
-        "mcp-framework": "^0.1.29"
+        "@ronangrant/mcp-framework": "^1.0.4"
       },
       devDependencies: {
         "@types/node": "^20.11.24",
@@ -85,13 +85,18 @@ export async function createProject(name?: string) {
       exclude: ["node_modules"],
     };
 
-    const indexTs = `import { MCPServer } from "mcp-framework";
+    const indexTs = `import { MCPServer } from "@ronangrant/mcp-framework";
+import ExampleTool from "./tools/ExampleTool.js";
 
 const server = new MCPServer();
+const exampleTool = new ExampleTool();
+
+// Register the example tool
+server["toolsMap"].set(exampleTool.name, exampleTool);
 
 server.start();`;
 
-    const exampleToolTs = `import { MCPTool } from "mcp-framework";
+    const exampleToolTs = `import { MCPTool } from "@ronangrant/mcp-framework";
 import { z } from "zod";
 
 interface ExampleInput {

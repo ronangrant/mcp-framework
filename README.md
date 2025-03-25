@@ -1,5 +1,48 @@
 # MCP Framework
 
+A TypeScript framework for building Model Context Protocol (MCP) servers.
+
+## Changes from Original
+
+This fork (@ronangrant/mcp-framework) includes the following improvements:
+- Replaced file-based logging with console-only logging for better compatibility and reliability
+- Removed dependency on filesystem for logs, eliminating ENOENT errors
+- Simplified logging implementation while maintaining the same interface
+- All logs now output to stderr via console.error()
+
+## Installation
+
+```bash
+npm install @ronangrant/mcp-framework
+```
+
+## Usage
+
+Create a new MCP server:
+
+```typescript
+import { MCPServer } from '@ronangrant/mcp-framework';
+
+const server = new MCPServer({
+  name: "my-server",
+  version: "1.0.0"
+});
+
+await server.start();
+```
+
+## Features
+
+- Easy-to-use API for creating MCP servers
+- Built-in support for tools, prompts, and resources
+- Simplified logging system with console output
+- Full TypeScript support
+- Flexible transport options
+
+## License
+
+MIT
+
 MCP-Framework is a framework for building Model Context Protocol (MCP) servers elegantly in TypeScript.
 
 MCP-Framework gives you architecture out of the box, with automatic directory-based discovery for tools, resources, and prompts. Use our powerful MCP abstractions to define tools, resources, or prompts in an elegant way. Our cli makes getting started with your own MCP server a breeze

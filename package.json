@@ -1,11 +1,11 @@
 {
-  "name": "mcp-framework",
-  "version": "0.1.30",
-  "description": "Framework for building Model Context Protocol (MCP) servers in Typescript",
+  "name": "@ronangrant/mcp-framework",
+  "version": "1.0.4",
+  "description": "Model Context Protocol Framework - Fixed version with NO logging",
   "type": "module",
   "author": "Alex Andru <alex@andru.codes>",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -60,5 +60,8 @@
     "@types/node": "^20.11.24",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

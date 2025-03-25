@@ -40,7 +40,7 @@ export async function addTool(name?: string) {
   try {
     await mkdir(toolsDir, { recursive: true });
 
-    const toolContent = `import { MCPTool } from "mcp-framework";
+    const toolContent = `import { MCPTool } from "@ronangrant/mcp-framework";
 import { z } from "zod";
 
 interface ${className}Input {

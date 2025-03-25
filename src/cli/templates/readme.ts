@@ -1,7 +1,7 @@
 export function generateReadme(projectName: string): string {
   return `# ${projectName}
 
-A Model Context Protocol (MCP) server built with mcp-framework.
+A Model Context Protocol (MCP) server built with @ronangrant/mcp-framework.
 
 ## Quick Start
 
@@ -45,7 +45,7 @@ mcp add tool file-handler
 Example tool structure:
 
 \`\`\`typescript
-import { MCPTool } from "mcp-framework";
+import { MCPTool } from "@ronangrant/mcp-framework";
 import { z } from "zod";
 
 interface MyToolInput {
@@ -146,7 +146,7 @@ Add this configuration to your Claude Desktop config file:
 
 ## Learn More
 
-- [MCP Framework Github](https://github.com/QuantGeekDev/mcp-framework)
+- [MCP Framework Github](https://github.com/ronangrant/mcp-framework)
 - [MCP Framework Docs](https://mcp-framework.com)
 `;
 }

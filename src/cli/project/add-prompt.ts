@@ -40,7 +40,7 @@ export async function addPrompt(name?: string) {
   try {
     await mkdir(promptsDir, { recursive: true });
 
-    const promptContent = `import { MCPPrompt } from "mcp-framework";
+    const promptContent = `import { MCPPrompt } from "@ronangrant/mcp-framework";
 import { z } from "zod";
 
 interface ${className}Input {
